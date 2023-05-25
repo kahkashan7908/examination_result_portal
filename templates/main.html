@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'cdnlines.html'%}
+    {% include 'navbar.html' %}
+    <title>main page</title>
+    <style>
+         
+        body{
+            background-image:url(/static/images/bg7.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .marqu{
+            font-size:50px;
+            /* margin-top: 50px; */
+            color:cyan;
+            margin-left: 300px;
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <div class="marqu text-center ">
+        <marquee direction="up" scrollamount="15" style="height: 600px;">Please select 
+            <img src="{% static 'images/up.jpg' %}"style="border-radius: 50%; width:100px;"> 
+            your standards</marquee>
+   </div>  
+   
+</body>
+</html>

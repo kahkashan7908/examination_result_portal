@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT MARKSHEET</title>
+    {% include 'cdnlines.html' %}
+    <style>
+        table{
+            margin-top: 18px;   
+        }
+        td{
+            font-weight: bold;
+        }
+        .table2{
+            margin-top: -10px;
+        }
+        p{
+            margin-top: -17px;
+            color:lime;
+        }
+        body{
+            background-image:url(/static/images/rgb3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .button:hover{
+            box-shadow:0px 0px 10px azure,0px 0px 20px skyblue,0px 0px 40px aqua;
+        }
+       
+    </style>
+</head>
+<body class="container-fluid">
+    <h1 class=" mt-4 text-center text-warning">BTech EXAMINATION RESULT</h1>
+    <!-- <h1 class="text-center text-primary mt-3">{{name}} Your Result is Here</h1> -->
+    <div class="table" >
+        <center>
+            <table bgcolor=" gainsboro" border="1" style="width:50%;">
+                <tr>
+                    <th colspan="7" bgcolor="coral" style="color: white;  font-size: 20px;" class="text-center">Student Details</th>
+                </tr>
+                <tr bgcolor=" cornsilk">
+                            <th style="width: 30%;">Hall Ticket Number</th>
+                            <th> {{data.hall_ticket}} </th>
+                        </tr>
+                <tr bgcolor=" cornsilk">
+                            <th>Student Name </th>
+                            <th> {{data.name}} </th>
+                        </tr>
+                    </tr>
+                <tr bgcolor=" cornsilk">
+                                <th>Total marks </th>
+                                <th> {{500}} </th>
+                            </tr>
+                        </tr>
+                <tr bgcolor=" cornsilk">
+                                    <th>Obtaining Marks </th>
+                                    <th> {{total}} </th>
+                                </tr>
+                <tr bgcolor=" cornsilk">
+                            <th>Result </th>
+                            <th>{{result}}</th>
+                        </tr>
+                <tr bgcolor=" cornsilk">
+                            <th>Grade</th>
+                            <th>{{grade}}</th>
+                        </tr>
+                </table>
+        </center>
+    </div>
+    <div>
+       <center>
+        <table class="table2 table table-bordered text-center"  style="width:70%;">
+            <tr>
+                <th colspan="3" bgcolor="coral" style="color: white;  font-size: 20px;" class="text-center">Marks Details</th>
+            </tr>
+               
+                <tr  bgcolor="lightcyan" style="color: red;  font-size: 18px;" >
+                    <th>SUBJECTS</th>
+                    <th>MARKS</th>
+                    <th>RESULT</th>
+                </tr>
+                <tr bgcolor="lightcyan">
+                    <td style="font-weight: bold; font-size:18px;">English</td>
+                    <td>{{data.english}}</td>
+                    <td>{{marks1}}</td>
+                </tr>
+                <tr bgcolor="lightcyan">
+                    <td style="font-weight: bold; font-size:18px;">Chemistry</td>
+                    <td>{{data.chemistry}}</td>
+                    <td>{{marks2}}</td>
+                </tr>
+                <tr bgcolor="lightcyan">
+                    <td style="font-weight: bold; font-size:18px;">Mathematics</td>
+                    <td>{{data.mathematics}}</td>
+                    <td>{{marks3}}</td>
+                </tr>
+                <tr bgcolor="lightcyan">
+                    <td style="font-weight: bold; font-size:18px;">Machine</td>
+                    <td>{{data.machine}}</td> 
+                    <td>{{marks4}}</td>
+                </tr>
+                <tr bgcolor="lightcyan">
+                    <td style="font-weight: bold; font-size:18px;">Basic_electrical</td>
+                    <td>{{data.basic_electrical}}</td> 
+                    <td>{{marks5}}</td>
+                </tr>
+        </table>
+       </center>
+    </div>
+    <div>
+        <center>
+            <p>1. obtaining marks>400 and obtaining marks<=500 grade=A+</p>
+            <p>2. obtaining marks>=300 and obtaining marks<=400 grade=A</p>
+            <p>3. obtaining marks>200 and obtaining marks<300 grade=B</p>
+            <p>4. obtaining marks>150 and obtaining marks<=200 grade=C</p>
+            <p><span style="font-size: 18px; font-weight: bold; color: red;">NOTE: </span>
+                If a student passes every subject but fails at least one subject with a grade of "D"</p>
+        </center>
+        <center><a href="main" style="text-decoration: none;" class="button btn btn-outline-danger">go main page</a></center>
+    </div>
+    
+</body>
+</html>

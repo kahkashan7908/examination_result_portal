@@ -1,0 +1,53 @@
+{% load static %}
+<style>
+  a{
+   color: white;
+   font-size: 25px;
+   margin-left: 10px;
+  }
+  label{
+   color: white;
+   font-size: 25px;
+  }
+  nav{
+   box-shadow: 0px 0px 15px gray,0px 0px 20px black;
+  }
+  a:hover{
+    color:red;
+    box-shadow: 0px 0px 3px aqua, 0px 0px 0px 1.8px blue,0px 0px 0px 1.5px azure,0px 0px 0px 2px yellow;
+    border-radius: 5%;
+
+  }
+ </style>
+<nav class="navbar navbar-expand-lg bg-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="main">
+    <img src="{% static 'images/logo.jpg' %}" alt="logo" style="border-radius: 50%; width:50px;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="main">NTH</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="tenth">10TH</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="inter">Intermediate</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="degree">Degree</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="btech">BTech</a>
+    </li>
+    <li class="nav-item">
+      <label class="mt-2" style="margin-left: 150px;">Hello {{user.username}}</label>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-sm btn-danger mt-2" style="margin-left: 180px;" href="{% url 'loginPage' %}">LOG OUT</a>
+    </li>
+  </ul>
+</nav>
+

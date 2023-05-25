@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Page</title>
+    {% include 'cdnlines.html' %}
+    {% include 'navbar.html' %}
+    <style>
+        form{
+            margin-top: 150px;
+            box-shadow: 0px 0px 10px grey,0px 0px 10px black;
+            padding: 30px;
+            background-color:black;
+        }
+        body{
+            background-image:url(/static/images/bg7.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div  class="offset-4 col-4">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="number" class="form-control mt-3" placeholder="Enter your hall ticket number" name='htk'>
+                    <center><label class="text-danger mt-2 " style="font-size: 20px;">{{tokenmsg}}</label></center>
+                    <center class="mt-2">
+                        <input type="submit"value='Submit'class="btn btn-success btn-sm">
+                        <input type="reset"value='Cancel'class="btn btn-danger btn-sm">
+                    </center>
+                </form>
+
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>
