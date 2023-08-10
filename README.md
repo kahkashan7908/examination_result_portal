@@ -10,3 +10,8 @@ When we enter the main page, there is a navbar that contains different types of 
 If we click on the "nth" link, it will redirect us to the main page. However, if we click on the "10TH" link, it will redirect us to the "result check" page.
 On this page, there is a form where we can enter our hall ticket number. If the hall ticket number is correct, it will display the result.
 Otherwise, it will show an error message saying "invalid hall ticket." The remaining links will have the same functionality in the same manner.
+# Result Checker
+The intention of create a web app using Djnago that check the result.
+
+# SKILL SET REQUIRED:
+ Django, Python, BootStrap, HTML, CSS
