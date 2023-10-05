@@ -15,3 +15,15 @@ The intention of create a web app using Djnago that check the result.
 
 # SKILL SET REQUIRED:
  Django, Python, BootStrap, HTML, CSS
+
+ # Result:
+![result](https://github.com/kahkashan7908/examination_result_portal/assets/109336765/1356ddb2-128b-43bb-8120-a49fe07d0043)
+
+
+
+
+
+
+
+
+
